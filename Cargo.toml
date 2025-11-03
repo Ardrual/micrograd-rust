@@ -6,3 +6,11 @@ edition = "2024"
 [dependencies]
 engine = { path = "engine"}
 rand = "0.9.2"
+
+[[example]]
+name = "basic_training"
+path = "examples/basic_training.rs"
+
+[[example]]
+name = "computation_graph"
+path = "examples/computation_graph.rs"

@@ -1,4 +1,3 @@
-
 use engine::{MLP, value::Value};
 
 fn main() {
