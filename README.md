@@ -52,6 +52,36 @@ let mlp = MLP::new(2, &[16, 16, 1]);
 - Hidden layers use ReLU activation
 - Output layer uses linear (identity) activation for regression
 
+## Running Examples
+
+The project includes two example programs that demonstrate how to use the library:
+
+### Basic Training Example
+Train a neural network with train/test split:
+
+```bash
+cargo run --example basic_training
+```
+
+This example trains an MLP to learn the function `y = x1 + x2` with:
+- 8 training/test samples (6 train, 2 test)
+- 2 inputs → 16 hidden → 16 hidden → 1 output
+- MSE loss with SGD optimization
+- Demonstrates train/test split and loss tracking
+
+### Computation Graph Example
+Explore how the autodiff engine builds and backpropagates through computation graphs:
+
+```bash
+cargo run --example computation_graph
+```
+
+This example demonstrates:
+- Simple computation graphs with multiple operations
+- ReLU activation in graphs
+- Multiple paths through computation graphs
+- Computing gradients for complex expressions
+
 ## Usage
 
 ### Basic Training Loop
